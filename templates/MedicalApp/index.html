@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+<center><h1>Home Page for Medicine Details</h1></center>
+{% if e.count %}
+<table border=2>
+  <thead>
+    <th>sku_id</th>
+  <th>product_id</th>
+  <th>sku_name</th>
+  <th>price</th>
+  <th>manufacturer_name</th>
+  <th>salt_name</th>
+  <th>drug_form</th>
+  <th>Pack_size</th>
+  <th>strength</th>
+  <th>product_banned_flag</th>
+  <th>unit</th>
+  <th>price_per_unit</th>
+  </thead>
+  {% for i in e %}
+    <tr>
+      <td>{{i.sku_id}}</td>
+    <td>{{i.product_id}}</td>
+    <td>{{i.sku_name}}</td>
+    <td>{{i.price}}</td>
+    <td>{{i.manufacturer_name}}</td>
+    <td>{{i.salt_name}}</td>
+    <td>{{i.drug_form}}</td>
+    <td>{{i.Pack_size}}</td>
+    <td>{{i.strength}}</td>
+    <td>{{i.product_banned_flag}}</td>
+    <td>{{i.unit}}</td>
+    <td>{{i.price_per_unit}}</td>
+  </tr>
+    {%endfor%}
+  </table>
+  {% else %}
+    <h2> No medical Data </h2>
+  {%endif%}
+
+  </body>
+</html>

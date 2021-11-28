@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <center><h3> Click below button for all Medicine Data </h3> </center>
+    <center><button> <a href="/details">Load Details to/from DataBase</a></button></center>
+      <hr>
+    <center><form method="POST">
+    <h2>Enter Medicine name to Search</h2>
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="Submit" value="Search">
+  </form></center>
+  </body>
+</html>
